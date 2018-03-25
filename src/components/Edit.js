@@ -37,7 +37,9 @@ class Edit extends Component {
   }
 
   render() {
-    return (
+    if (Object.keys(this.state.company).length !== 0 ){
+  
+      return (
       <div class="container">
         <div class="panel panel-default">
           <div class="panel-heading">
@@ -87,6 +89,9 @@ class Edit extends Component {
       </div>
     );
   }
+  else{
+    return null; 
+  }
 }
-
+}
 export default Edit;

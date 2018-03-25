@@ -18,8 +18,6 @@ class Show extends Component {
       .then(res => {
         this.setState({ company: res.data });
         console.log(this.state.company);
-        console.log( this.state.company.offices);
-        
       });
   }
 
@@ -32,8 +30,9 @@ class Show extends Component {
   }
 
   render() {
-  //  console.log(this.state.company.offices.length > 0);
-  //  if (this.state.company !== {}){
+    
+  if (Object.keys(this.state.company).length !== 0 ){
+  
     return (
       <div class="container">
         <div class="panel panel-default">
@@ -61,6 +60,25 @@ class Show extends Component {
               <dd>{this.state.company.overview}</dd>
               <dt>Total Money Raised:</dt>
               <dd>{this.state.company.total_money_raised}</dd>
+              <dt>Counrty:</dt>
+              <dd>{this.state.company.offices.map(office =>{
+                     return (
+                            <div key={this.state.company.offices}>
+                                <dd>{office.country_code}</dd>
+                             </div>
+                     );
+                   }  
+             )}</dd>
+              <dt>Cities:</dt>
+              <dd>{this.state.company.offices.map(office =>{
+                     return (
+                            <div key={this.state.company.offices}>
+                                <dd>{office.city}</dd>
+                             </div>
+                     );
+                   }  
+             )}</dd>
+             
             </dl>
             <Link to={`/edit/${this.state.company._id}`} class="btn btn-success">Edit</Link>&nbsp;
             <button onClick={this.delete.bind(this, this.state.company._id)} class="btn btn-danger">Delete</button>
@@ -69,6 +87,10 @@ class Show extends Component {
       </div>
     );
   }
-}
+  else{
+    return null;
 
+  }
+}
+}
 export default Show;
