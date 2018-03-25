@@ -61,7 +61,7 @@ npm start
 
 ## 💎 Results:
 
-Now that the app is launched, it will take few minutes to load the dataset. Then you should see the differents objects of the dataset and be able to add, edit and delete elements, as you can see on the screenshots below :
+Now that the app is launched, go to [localhost:3000](http://localhost:3000/), it will take few minutes to load the dataset. Then you should see the differents objects of the dataset and be able to add, edit and delete elements, as you can see on the screenshots below :
 
 <p align="center"> 
 <img src="https://github.com/CyrineBzn/Web-App-NoSql/blob/master/index.png">
@@ -79,6 +79,9 @@ Now that the app is launched, it will take few minutes to load the dataset. Then
 </p>
 
 
-And go to [localhost:3000](http://localhost:3000/)
+## 🎓 Credits:
 
+* BOUZAYENE Cyrine
+* DYANI Imane 
+* GHAFARI Paul
 
